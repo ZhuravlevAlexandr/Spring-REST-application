@@ -1,6 +1,7 @@
 package petProject.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -12,6 +13,7 @@ public class MeasurementDTO {
     private Double value;
 
     @NotNull
+    @JsonProperty("isRaining")
     private Boolean isRaining;
 
     @NotNull

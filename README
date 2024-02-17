@@ -1,0 +1,15 @@
+do POST localhost:8080/sensors/registration
+
+{
+  "name": "test"
+}
+
+next do POST http://localhost:8080/measurements/add
+
+{
+    "value": 10,
+    "isRaining": true,
+    "sensor": {
+        "name": "test"
+    }
+}

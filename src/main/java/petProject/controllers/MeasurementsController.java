@@ -1,5 +1,6 @@
 package petProject.controllers;
 
+import org.springframework.validation.annotation.Validated;
 import petProject.dto.MeasurementDTO;
 import petProject.dto.MeasurementsResponse;
 import petProject.models.Measurement;
@@ -18,7 +19,7 @@ import java.util.stream.Collectors;
 
 import static petProject.util.ErrorsUtil.returnErrorsToClient;
 
-
+@Validated
 @RestController
 @RequestMapping("/measurements")
 public class MeasurementsController {
